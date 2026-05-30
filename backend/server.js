@@ -1,13 +1,13 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
-import dotenv from 'dotenv'
 import authRoutes from './routes/authRoute.js'
 import packageRoutes from './routes/packageRoute.js'
 import bookingRoutes from './routes/bookingRoutes.js'
 
 
-dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors())
