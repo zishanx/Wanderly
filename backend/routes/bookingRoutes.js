@@ -9,6 +9,6 @@ router.post('/book', protect, createBooking)
 
 router.post('/verify', protect, verifyPayment)
 
-router.get('/all',protect,getMyBooking)
+router.get('/all', protect, getMyBooking)
 
 export default router; 
