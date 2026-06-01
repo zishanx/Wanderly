@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Packages from './pages/Packages'
 import PackageDetails from './pages/PackageDetails'
+import Contact from "./pages/Contact.jsx"
 
 
 
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/packages/:id" element={<PackageDetails />}></Route>
           <Route path="/booking/:id" element={<Booking />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Routes>
 
       </BrowserRouter>
