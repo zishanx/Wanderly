@@ -9,7 +9,7 @@ const seed = async () => {
 
     const data = [
         {
-            name: "Mount Bromo Sunirse Trek",
+            name: "Mount Bromo Sunrise Trek",
             price: 256,
             destination: "Indonesia",
             images: ['https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80'],
@@ -27,7 +27,7 @@ const seed = async () => {
             availableDate: new Date("2026-06-01")
         },
         {
-            name: "Kashmir Vallery Explorer",
+            name: "Kashmir Valley Explorer",
             price: 256,
             destination: "India",
             images: ['https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80'],

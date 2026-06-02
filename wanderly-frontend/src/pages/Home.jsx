@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
+import Summary from "../components/Summary"
 
 // // Hero
 // https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
@@ -12,12 +13,9 @@ import Hero from "../components/Hero"
 export default function Home() {
     return (
         <>
-
             <Navbar></Navbar>
             <Hero></Hero>
-
-
-
+            <Summary></Summary>
         </>
     )
 }
