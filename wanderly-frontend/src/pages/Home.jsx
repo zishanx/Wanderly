@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
 
 // // Hero
 // https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
@@ -13,13 +14,7 @@ export default function Home() {
         <>
 
             <Navbar></Navbar>
-
-            <section
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')` }}
-                className="h-screen bg-cover bg-center relative"
-            >
-                <div className="absolute inset-0 bg-black/50"></div>
-            </section>
+            <Hero></Hero>
 
 
 

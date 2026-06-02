@@ -1,5 +1,7 @@
-export default function Package(){
+export default function PackageDetails(){
     return(
-        <h1>Package</h1>
+        <h1>
+            PackageDetails
+        </h1>
     )
 }

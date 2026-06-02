@@ -1,1 +1,5 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+* {
+  font-family:'Playfair Display', 'DM Sans', serif;
+}
