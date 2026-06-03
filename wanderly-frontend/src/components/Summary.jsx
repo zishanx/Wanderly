@@ -44,8 +44,8 @@ export default function Summary() {
                                 className="text-center p-4 bg-white shadow-md hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all duration-300 backdrop-blur-md rounded-md cursor-pointer flex flex-col gap-2 items-center">
                                 <img src={image} className="w-64 h-48 object-cover rounded-2xl" alt="" />
                                 <h1 className="font-bold  text-2xl pt-4">{item.name}</h1>
-                                <p className="text-gray-500">{item.destination}</p>
                                 <p className="font-bold">${item.price}</p>
+                                <p className="text-gray-500">{item.destination}</p>
                                 <p>{item.duration}</p>
 
                             </div>
