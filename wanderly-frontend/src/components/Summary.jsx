@@ -30,11 +30,11 @@ export default function Summary() {
 
             </div>
             <div className=" flex gap-10 pt-10 justify-center">
-                {Trips.slice(0, 3).map(item => {
+                {Trips.slice(0, 4).map(item => {
 
                     let image = item.images[0]
                     return (
-                        <>
+                        
 
                             <div
                                 onClick={() => {
@@ -50,7 +50,7 @@ export default function Summary() {
 
                             </div>
 
-                        </>
+                        
                     )
                 })}
 
