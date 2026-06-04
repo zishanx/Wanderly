@@ -43,7 +43,7 @@ export default function PackageDetails() {
 
             // 3. Hero images staggered
             gsap.from(".hero-img", {
-                y: 40,
+                x: 40,
                 opacity: 0,
                 duration: 0.8,
                 stagger: 0.1,
