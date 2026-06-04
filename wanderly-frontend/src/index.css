@@ -3,3 +3,7 @@
 * {
   font-family:'Playfair Display', 'DM Sans', serif;
 }
+
+html, body {
+    overflow-x: hidden;
+}

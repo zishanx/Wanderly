@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import api from "../api/axios"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -10,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Package() {
 
     const [data, setData] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -78,13 +81,13 @@ export default function Package() {
             </div>
             <div className="w-1/2 mx-auto border-t-2 border-black mb-10"></div>
 
-            <div className="px-32 py-16 grid grid-cols-2 gap-5">
+            <div className="px-32 py-16 grid grid-cols-2 gap-5 w-full overflow-hidden">
 
                 {data.map(item => {
                     let image = item.images[0]
                     return (
-                        <div 
-                        key={item._id} className="package-card relative group overflow-hidden rounded-2xl cursor-pointer shadow-md">
+                        <div
+                            key={item._id} className="package-card relative group overflow-hidden rounded-2xl shadow-md">
                             <img src={image} className="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-110" alt="" />
                             <div className="absolute bottom-0 left-0 right-0 group-hover:opacity-0 transition-opacity duration-300 p-4">
                                 <h1 className="text-white font-bold text-3xl">{item.name}</h1>
@@ -94,7 +97,11 @@ export default function Package() {
                                 <p className="text-gray-300">{item.destination}</p>
                                 <p className="text-white font-bold">${item.price}</p>
                                 <p className="text-gray-300">{item.duration}</p>
-                                <button className="mt-3 border border-white text-white px-4 py-2 rounded-full mx-auto font-bold text-sm">
+                                <button 
+                                    onClick={()=>{
+                                        navigate(`/packages/${item._id}`)
+                                    }}
+                                    className="mt-3 border border-white text-white px-4 py-2 rounded-full mx-auto font-bold text-sm cursor-pointer">
                                     View details
                                 </button>
                             </div>
@@ -103,6 +110,8 @@ export default function Package() {
                 })}
 
             </div>
+            <div className="w-1/2 mx-auto border-t-2 border-black mb-10"></div>
+            <Footer></Footer>
         </>
     )
 }
