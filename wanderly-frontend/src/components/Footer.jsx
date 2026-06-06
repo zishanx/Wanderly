@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function Footer() {
+
+    const navigate = useNavigate()
     return (
 
 
@@ -15,8 +17,8 @@ export default function Footer() {
                     <ul className="text-gray-500">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/packages">Packages</Link></li>
-                        <li><Link to="/">Login</Link></li>
-                        <li><Link to="/">Register</Link></li>
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/register">Register</Link></li>
                     </ul>
                 </div>
 
@@ -31,8 +33,8 @@ export default function Footer() {
 
                 <div className="flex flex-col  items-start gap-4">
                     <div className="flex gap-2">
-                        <button className="py-2 px-4 bg-black text-white rounded-full">Login</button>
-                        <button className="py-2 px-4 bg-black text-white rounded-full">Register</button>
+                        <button className="py-2 px-4 bg-black text-white rounded-full " onClick={() => { navigate('/login') }}>Login</button>
+                        <button className="py-2 px-4 bg-black text-white rounded-full" onClick={() => { navigate('/register') }}>Register</button>
                     </div>
                     <div className="social-icons flex gap-2 pt-2 px-1">
                         <a href="https://youtube.com" className="shadow p-2 rounded-full">
