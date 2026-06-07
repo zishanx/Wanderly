@@ -11,28 +11,39 @@ console.log(process.env.RAZORPAY_KEY_ID, process.env.RAZORPAY_KEY_SECRET)
 export const createBooking = async (req, res) => {
     try {
 
-        const razorpay = new Razorpay({
-            key_id: process.env.RAZORPAY_KEY_ID,
-            key_secret: process.env.RAZORPAY_KEY_SECRET
-        })
         const { packageId, selectedDate, travelers } = req.body;
         const getpackage = await Package.findById(packageId);
         const totalPrice = getpackage.price * travelers;
 
-        const order = await razorpay.orders.create({ amount: totalPrice * 100, currency: "INR" })
+        const getdate = getpackage.departureDate.find(task => new Date(task.date).toISOString() === new Date(selectedDate).toISOString());
 
-        await Booking.create({
-            user: req.user.user_id,
-            package: packageId,
-            selectedDate,
-            travelers,
-            totalPrice,
-            paymentStatus: "pending",
-            razorpayOrderId: order.id
-        })
+        if (getdate.slot > 0) {
+            const razorpay = new Razorpay({
+                key_id: process.env.RAZORPAY_KEY_ID,
+                key_secret: process.env.RAZORPAY_KEY_SECRET
+            })
+
+            const order = await razorpay.orders.create({ amount: totalPrice * 100, currency: "INR" })
+
+            await Booking.create({
+                user: req.user.user_id,
+                package: packageId,
+                selectedDate,
+                travelers,
+                totalPrice,
+                paymentStatus: "pending",
+                razorpayOrderId: order.id
+            })
+            getdate.slot -= 1
+
+            await getpackage.save()
+
+            res.status(200).json(order)
+        } else {
+            res.status(300).json("No slot available")
+        }
 
 
-        res.status(200).json(order)
     } catch (error) {
         res.status(400).json({ message: error.message })
     }

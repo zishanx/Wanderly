@@ -8,12 +8,17 @@ const packageSchema = new mongoose.Schema({
     images: { type: [String], required: true },
     duration: { type: String, required: true },
     maxTraveler: { type: Number, required: true },
-    availableDate: { type: Date, required: true },
     description: { type: String, required: true },
+    departureDate: {
+        type: [{
+            date: Date,
+            slot: Number,
+        }], required: true
+    },
     included: {
         type: [{
-            title:String,
-            detail:String,
+            title: String,
+            detail: String,
         }],
         required: true
     },

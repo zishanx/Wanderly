@@ -1,11 +1,11 @@
-import mongoose from "mongoose"
-import dotenv from 'dotenv'
-import Package from "./models/Package.js"
+import mongoose from "mongoose";
+import dotenv from 'dotenv';
+import Package from "./models/Package.js";
 
-dotenv.config()
+dotenv.config();
 
 const seed = async () => {
-    await mongoose.connect(process.env.MONGO_URI)
+    await mongoose.connect(process.env.MONGO_URI);
 
     const data = [
         {
@@ -30,7 +30,11 @@ const seed = async () => {
             ],
             duration: "3 Days",
             maxTraveler: 4,
-            availableDate: new Date("2026-06-01"),
+            departureDate: [
+                { date: new Date("2026-06-15"), slots: 10 },
+                { date: new Date("2026-07-22"), slots: 4 },
+                { date: new Date("2026-08-11"), slots: 14 },
+            ],
             description: "Experience the breathtaking sunrise over Mount Bromo, one of Indonesia's most active volcanoes. Trek through a sea of sand, witness golden skies, and feel the raw power of nature on this unforgettable volcanic adventure.",
             included: [
                 { title: "Expert Guide", detail: "Professional English-speaking local mountaineer guide." },
@@ -51,7 +55,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80'],
             duration: "5 Days",
             maxTraveler: 3,
-            availableDate: new Date("2026-06-01"),
+            departureDate: [
+                { date: new Date("2026-06-18"), slots: 6 },
+                { date: new Date("2026-07-05"), slots: 12 },
+                { date: new Date("2026-08-20"), slots: 9 },
+            ],
             description: "Immerse yourself in Bali's lush green rice terraces, ancient temples, and vibrant culture. From Ubud's artistic heart to Tegallalang's iconic terraces, this trip is a feast for the senses.",
             included: [
                 { title: "Villa Stay", detail: "4 nights in a private luxury pool villa situated in Ubud." },
@@ -72,7 +80,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80'],
             duration: "7 Days",
             maxTraveler: 2,
-            availableDate: new Date("2026-06-01"),
+            departureDate: [
+                { date: new Date("2026-07-01"), slots: 5 },
+                { date: new Date("2026-07-25"), slots: 8 },
+                { date: new Date("2026-09-10"), slots: 12 },
+            ],
             description: "Discover the paradise on earth — Kashmir. From serene Dal Lake houseboats to snow-capped Gulmarg meadows, this journey through India's most beautiful valley will leave you speechless.",
             included: [
                 { title: "Houseboat Stay", detail: "Traditional hand-carved cedar luxury houseboat experience." },
@@ -94,7 +106,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80'],
             duration: "4 Days",
             maxTraveler: 4,
-            availableDate: new Date("2026-06-01"),
+            departureDate: [
+                { date: new Date("2026-06-10"), slots: 15 },
+                { date: new Date("2026-08-02"), slots: 7 },
+                { date: new Date("2026-10-05"), slots: 20 },
+            ],
             description: "Escape to the crystal-clear waters of the Maldives. Stay in a luxurious overwater bungalow, snorkel with manta rays, and watch the most stunning sunsets on earth.",
             included: [
                 { title: "Overwater Bungalow", detail: "Premium ocean-view villa with direct lagoon access ladder." },
@@ -115,7 +131,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80'],
             duration: "5 Days",
             maxTraveler: 6,
-            availableDate: new Date("2026-07-01"),
+            departureDate: [
+                { date: new Date("2026-07-04"), slots: 11 },
+                { date: new Date("2026-07-18"), slots: 16 },
+                { date: new Date("2026-08-25"), slots: 6 },
+            ],
             description: "Sail through the volcanic caldera of Santorini, explore whitewashed villages perched on cliffs, and experience the most famous sunset in the world from Oia.",
             included: [
                 { title: "Hotel Stay", detail: "Boutique cliffside hotel featuring classic Cycladic architecture." },
@@ -136,7 +156,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80'],
             duration: "10 Days",
             maxTraveler: 3,
-            availableDate: new Date("2026-08-01"),
+            departureDate: [
+                { date: new Date("2026-08-08"), slots: 8 },
+                { date: new Date("2026-09-12"), slots: 15 },
+                { date: new Date("2026-10-01"), slots: 5 },
+            ],
             description: "Trek through one of the world's last true wildernesses. Massive glaciers, jagged peaks, and untouched landscapes make Patagonia a bucket-list destination for every serious adventurer.",
             included: [
                 { title: "Expert Guide", detail: "UIAGM-certified high-mountain trekking guides." },
@@ -158,7 +182,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80'],
             duration: "6 Days",
             maxTraveler: 5,
-            availableDate: new Date("2026-04-01"),
+            departureDate: [
+                { date: new Date("2026-04-05"), slots: 18 },
+                { date: new Date("2026-04-15"), slots: 22 },
+                { date: new Date("2026-04-28"), slots: 14 },
+            ],
             description: "Walk under canopies of pink cherry blossoms in ancient Kyoto. Visit centuries-old temples, participate in a traditional tea ceremony, and experience Japan at its most magical.",
             included: [
                 { title: "Ryokan Stay", detail: "Traditional inn lodging featuring hot springs (onsen) access." },
@@ -179,7 +207,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80'],
             duration: "4 Days",
             maxTraveler: 8,
-            availableDate: new Date("2026-09-01"),
+            departureDate: [
+                { date: new Date("2026-09-02"), slots: 24 },
+                { date: new Date("2026-10-14"), slots: 11 },
+                { date: new Date("2026-11-03"), slots: 30 },
+            ],
             description: "Ride camels into the golden dunes of the Sahara, sleep under a blanket of stars in a luxury desert camp, and explore the ancient medinas and kasbahs of Morocco.",
             included: [
                 { title: "Riad Stay", detail: "Courtyard oasis hotel in Marrakech featuring Morrocan tiling." },
@@ -200,7 +232,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80'],
             duration: "7 Days",
             maxTraveler: 4,
-            availableDate: new Date("2026-06-15"),
+            departureDate: [
+                { date: new Date("2026-06-20"), slots: 5 },
+                { date: new Date("2026-07-12"), slots: 8 },
+                { date: new Date("2026-08-01"), slots: 12 },
+            ],
             description: "Drive the world's most scenic coastal road, stopping at clifftop villages, hidden beaches, and centuries-old lemon groves. The Amalfi Coast is Italy at its most dramatic and beautiful.",
             included: [
                 { title: "Boutique Hotel", detail: "Clifftop lodging overlooking the Tyrrhenian Sea." },
@@ -222,7 +258,11 @@ const seed = async () => {
             images: ['https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80'],
             duration: "5 Days",
             maxTraveler: 6,
-            availableDate: new Date("2026-11-01"),
+            departureDate: [
+                { date: new Date("2026-11-05"), slots: 16 },
+                { date: new Date("2026-12-01"), slots: 25 },
+                { date: new Date("2027-01-10"), slots: 14 },
+            ],
             description: "Chase the aurora borealis across Iceland's volcanic landscapes. From thundering waterfalls to geothermal hot springs, Iceland in winter is an otherworldly experience unlike anything else on earth.",
             included: [
                 { title: "Hotel Stay", detail: "Modern eco-lodges optimized away from urban light pollution." },
@@ -238,13 +278,11 @@ const seed = async () => {
         }
     ];
 
-    await Package.deleteMany()
-    await Package.insertMany(data)
+    await Package.deleteMany();
+    await Package.insertMany(data);
 
-    mongoose.disconnect()
+    mongoose.disconnect();
+    console.log("Done");
+};
 
-    console.log("Done")
-}
-
-
-seed()
+seed();
