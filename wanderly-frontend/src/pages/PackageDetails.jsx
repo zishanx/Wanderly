@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import api from "../api/axios"
 import { useEffect, useState } from "react"
 import Navbar from '../components/Navbar'
@@ -10,12 +10,13 @@ export default function PackageDetails() {
 
     const { id } = useParams()
     const [data, setData] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await api.get(`/package/get/one/${id}`);
             setData([response.data])
-            console.log(response.data)
+
         }
 
         fetchData()
@@ -74,22 +75,27 @@ export default function PackageDetails() {
                     <div key={item._id}>
                         <section style={{ backgroundImage: `url(${item.images[1]})` }}
                             className="h-screen bg-cover bg-center relative">
-                            <div className="absolute inset-0 bg-black/50 w-full h-screen flex  pt-20 px-30  justify-between flex-col text-white">
+                            <div className="absolute inset-0 bg-black/50 w-full h-screen flex  pt-20 px-30  justify-between flex-col text-white ">
                                 <div className="h-screen justify-between py-5 text-white flex flex-col gap-10">
                                     <div className="flex jutify-center items-center pt-20">
                                         <h1 className="hero-title text-7xl">{item.name}</h1>
                                     </div>
                                     <div className="flex justify-between items-end gap-2 pb-15 ">
                                         <div className="flex gap-4 w-3/4">
-                                            {item.images.slice(2, 7).map(hero => {
+                                            {item.images.slice(2, 7).map((hero, index) => {
                                                 return (
-                                                    <div className="w-full flex flex-col ">
+                                                    <div key={'hero' + index} className="w-full flex flex-col ">
                                                         <img src={hero} className=" hero-img rounded-md shadow-md h-72 object-cover" alt="" />
                                                     </div>
                                                 )
                                             })}
                                         </div>
-                                        <button className="bg-white text-black px-8 py-4 font-bold rounded-md" >Book now</button>
+                                        <button
+                                            onClick={() => {
+                                                console.log('Clickec' + id)
+                                                navigate(`/booking/${id}`)
+                                            }}
+                                            className="bg-white text-black px-8 py-4 font-bold rounded-md pointer z-4" >Book now</button>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +116,7 @@ export default function PackageDetails() {
                                     <div className="absolute left-1/2 top-2 bottom-0 w-px bg-white/30"></div>
                                     {item.itinerary.map((stop, index) => {
                                         return (
-                                            <div key={index} className={`relative flex items-start gap-10 timeline-item mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}` }>
+                                            <div key={index} className={`relative flex items-start gap-10 timeline-item mb-16 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
 
                                                 {/* Center dot */}
                                                 <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white z-10"></div>
@@ -145,9 +151,9 @@ export default function PackageDetails() {
                                 <h1 className="flex-no-wrap text-white text-6xl ">WHAT'S INCLUDED</h1><div className=" flex-1 bg-white h-px "></div>
                             </div>
                             <div className="flex gap-5 justify-between">
-                                {item.included.map(thing => {
+                                {item.included.map((thing, index) => {
                                     return (
-                                        <div className="bg-white/10 backdrop-blur-md rounded-xl border border-1 border-white p-4 flex flex-col gap-4">
+                                        <div key={'id' + index} className="bg-white/10 backdrop-blur-md rounded-xl border border-1 border-white p-4 flex flex-col gap-4">
                                             <h1 className=" text-white text-2xl font-bold">
                                                 ✧ {thing.title}
                                             </h1>

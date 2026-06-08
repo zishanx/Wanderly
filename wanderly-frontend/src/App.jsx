@@ -31,7 +31,7 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <PageTransition>
+        
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/login" element={<Login />}></Route>
@@ -42,7 +42,6 @@ export default function App() {
             <Route path="/dashboard" element={<ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
-        </PageTransition>
 
       </BrowserRouter>
     </AuthProvider>
