@@ -12,7 +12,7 @@ const packageSchema = new mongoose.Schema({
     departureDate: {
         type: [{
             date: Date,
-            slot: Number,
+            slots: Number,
         }], required: true
     },
     included: {
@@ -32,6 +32,6 @@ const packageSchema = new mongoose.Schema({
     }
 })
 
-const Package = mongoose.model('package', packageSchema)
+const Package = mongoose.model('Package', packageSchema)
 
 export default Package

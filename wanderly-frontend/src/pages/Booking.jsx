@@ -15,6 +15,7 @@ export default function Booking() {
         const fetchData = async () => {
             const response = await api.get(`/package/get/one/${id}`)
             setBooking(response.data)
+            console.log(response.data)
         }
         fetchData()
     }, [])
@@ -99,7 +100,7 @@ export default function Booking() {
                         {booking.departureDate.map((item, index) => {
                             const date = new Date(item.date)
                             const isSelected = selectedDate === item.date
-                            const noSlots = item.slot === 0
+                            const noSlots = item.slots === 0
                             return (
                                 <button
                                     key={index}
@@ -117,7 +118,7 @@ export default function Booking() {
                                         {date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                                     </p>
                                     <p className={`text-xs mt-1 ${noSlots ? 'text-red-400' : isSelected ? 'text-cyan-500' : 'text-gray-400'}`}>
-                                        {noSlots ? 'Sold out' : `${item.slot} slots left`}
+                                        {noSlots ? 'Sold out' : `${item.slots} slots left`}
                                     </p>
                                 </button>
                             )

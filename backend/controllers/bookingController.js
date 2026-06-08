@@ -17,7 +17,7 @@ export const createBooking = async (req, res) => {
 
         const getdate = getpackage.departureDate.find(task => new Date(task.date).toISOString() === new Date(selectedDate).toISOString());
 
-        if (getdate.slot > 0) {
+        if (getdate.slots > 0) {
             const razorpay = new Razorpay({
                 key_id: process.env.RAZORPAY_KEY_ID,
                 key_secret: process.env.RAZORPAY_KEY_SECRET
@@ -34,7 +34,7 @@ export const createBooking = async (req, res) => {
                 paymentStatus: "pending",
                 razorpayOrderId: order.id
             })
-            getdate.slot -= 1
+            getdate.slots -= 1
 
             await getpackage.save()
 
