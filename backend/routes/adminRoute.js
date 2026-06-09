@@ -1,14 +1,20 @@
 import express from 'express'
 
-import protect from '../middlewares/protect'
-import admin from '../middlewares/admin'
-import { getAllBookings } from '../controllers/adminController'
-import { deletePackage } from '../controllers/adminController'
+import {protect} from '../middlewares/protect.js'
+import {admin} from '../middlewares/admin.js'
+import { getAllBookings } from '../controllers/adminController.js'
+import { deletePackage } from '../controllers/adminController.js'
+
+
 
 
 const router = express.Router()
 
-router.get('/admin/all', protect, admin, getAllBookings)
+router.get('/all', protect, admin, getAllBookings)
+
+// packageRoutes
+
+router.post('/admin/post',protect,admin,)
 
 router.delete('/delete/:id', protect, admin, deletePackage)
 

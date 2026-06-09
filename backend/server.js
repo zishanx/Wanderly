@@ -6,6 +6,7 @@ import cors from 'cors'
 import authRoutes from './routes/authRoute.js'
 import packageRoutes from './routes/packageRoute.js'
 import bookingRoutes from './routes/bookingRoutes.js'
+import adminRoutes from './routes/adminRoute.js'
 
 
 const app = express()
@@ -15,6 +16,7 @@ app.use(cors())
 app.use('/api/auth', authRoutes)
 app.use('/api/package',packageRoutes)
 app.use('/api/booking',bookingRoutes)
+app.use('/api/admin',adminRoutes)
 
 
 mongoose.connect(process.env.MONGO_URI)

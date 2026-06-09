@@ -20,6 +20,14 @@ export default function Booking() {
         fetchData()
     }, [])
 
+    useEffect(() => {
+        const script = document.createElement('script')
+        script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+        script.async = true
+        document.body.appendChild(script)
+        return () => document.body.removeChild(script)
+    }, [])
+
     const createOrder = async () => {
         if (!selectedDate) return setError("Please select a departure date")
         if (!travelers || travelers < 1) return setError("Please enter number of travelers")
