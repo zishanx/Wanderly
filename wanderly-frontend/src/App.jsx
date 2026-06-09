@@ -1,4 +1,4 @@
-import { AuthProvider } from "./context/Authcontext"
+import { AuthProvider } from "./context/AuthContext"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home.jsx'

@@ -12,7 +12,7 @@ export default function AdminDashboard() {
         const fetchData = async () => {
             try {
                 const [bookingsRes, packagesRes] = await Promise.all([
-                    api.get('/booking/admin/all'),
+                    api.get('/admin/all'),
                     api.get('/package/get/all')
                 ])
                 setBookings(bookingsRes.data)

@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { useAuth } from '../context/Authcontext'
+import { useAuth } from '../context/AuthContext'
 
 const ProtectedRoute = ({ children, adminOnly },) => {
     const { user } = useAuth()
@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children, adminOnly },) => {
     }
 
     if (adminOnly === true) {
-        return user.role === "admin" ? children : <Navigate to="/" />
+        return user.isAdmin === true ? children : <Navigate to="/" />
     }
 
     return children
