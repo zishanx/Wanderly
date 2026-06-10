@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import Summary from "../components/Summary"
+import HowToBook from "../components/Howto"
 import Footer from "../components/Footer"
+import ContactSection from "./Contact"
 // // Hero
 // https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
 // // Packages
@@ -16,6 +18,8 @@ export default function Home() {
             <Navbar></Navbar>
             <Hero></Hero>
             <Summary></Summary>
+            <HowToBook></HowToBook>
+            <ContactSection></ContactSection>
             <Footer></Footer>
         </>
     )

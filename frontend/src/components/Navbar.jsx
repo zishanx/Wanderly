@@ -16,7 +16,6 @@ export default function Navbar() {
                 <ul className="hidden md:flex gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl items-center p-2 text-white">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/packages">Packages</Link></li>
-                    <li><a href="">Gallery</a></li>
                     <li><a href="">How it works</a></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </ul>
