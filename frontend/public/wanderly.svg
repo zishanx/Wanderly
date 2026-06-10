@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <defs>
+    <linearGradient id="compassGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="24" cy="24" r="20" stroke="url(#compassGlow)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.4" />
+  
+  <circle cx="24" cy="24" r="16" stroke="url(#compassGlow)" stroke-width="2" opacity="0.8" />
+  
+  <path d="M24 4v4M24 40v4M4 24h4M40 24h4" stroke="url(#compassGlow)" stroke-width="2" stroke-linecap="round" />
+  
+  <path d="M24 24L20 24L24 10L28 24Z" fill="url(#compassGlow)" />
+  
+  <path d="M24 24L28 24L24 38L20 24Z" fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-opacity="0.4" stroke-width="1" />
+  
+  <circle cx="24" cy="24" r="2.5" fill="#0a0a0a" stroke="url(#compassGlow)" stroke-width="1.5" />
+</svg>
