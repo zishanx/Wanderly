@@ -68,19 +68,19 @@ export default function PackageDetails() {
             {data.map((item) => {
                 return (
                     <div key={item._id}>
-                        <section 
+                        <section
                             style={{ backgroundImage: `url(${item.images[1]})` }}
                             className="min-h-screen lg:h-screen bg-cover bg-center relative flex flex-col justify-between"
                         >
                             <div className="absolute inset-0 bg-black/60 z-0" />
-                            
+
                             <div className="relative z-10 flex-1 flex flex-col justify-between pt-24 pb-12 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-30 text-white gap-12 lg:gap-0">
                                 <div className="flex items-center justify-start lg:pt-12">
                                     <h1 className="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-playfair tracking-tight leading-tight max-w-4xl">
                                         {item.name}
                                     </h1>
                                 </div>
-                                
+
                                 <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-8">
                                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full lg:w-3/4">
                                         {item.images.slice(2, 7).map((hero, index) => (
@@ -97,7 +97,7 @@ export default function PackageDetails() {
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-[#0f0f0f] z-0" />
                         </section>
 
@@ -114,31 +114,48 @@ export default function PackageDetails() {
                                 <div className="mb-12 md:mb-20 max-w-3xl mx-auto">
                                     <p className="text-neutral-300 text-base md:text-lg text-center leading-relaxed font-light">{item.description}</p>
                                 </div>
-                                
+
                                 <div className="relative">
                                     <div className="absolute left-4 md:left-1/2 top-2 bottom-0 w-px bg-white/20 -translate-x-1/2 md:translate-x-0"></div>
-                                    
-                                    {item.itinerary.map((stop, index) => {
-                                        const isEven = index % 2 === 0;
-                                        return (
-                                            <div 
-                                                key={index} 
-                                                className={`relative flex flex-col md:flex-row items-stretch gap-6 md:gap-12 timeline-item mb-12 md:mb-20 pl-10 md:pl-0 ${isEven ? '' : 'md:flex-row-reverse'}`}
-                                            >
-                                                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-cyan-400 z-10 top-1.5 ring-4 ring-cyan-900/50" />
 
-                                                <div className="w-full md:w-5/12 flex flex-col gap-3">
-                                                    <img src={item.images[(index * 2 + 7) % item.images.length]} className="rounded-2xl h-48 sm:h-64 md:h-60 w-full object-cover shadow-lg" alt="" />
-                                                    {isEven && (
-                                                        <img src={item.images[(index * 2 + 8) % item.images.length]} className="hidden sm:block rounded-2xl w-full h-48 sm:h-64 md:h-60 object-cover shadow-lg" alt="" />
+                                    {item.itinerary.map((stop, index) => {
+                                        
+                                        return (
+                                            <div
+                                                key={index}
+                                                className={`relative flex flex-col md:flex-row items-stretch gap-8 lg:gap-12 timeline-item mb-16 pl-10 md:pl-0 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'
+                                                    }`}
+                                            >
+
+                                                {/* Center dot - Locked left on mobile, perfectly centered on md+ screens */}
+                                                <div className="absolute left-4 md:left-1/2 top-2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 z-10 ring-4 ring-cyan-950"></div>
+
+                                                {/* Images Block - Generous flex sizing instead of rigid fractional scaling */}
+                                                <div className="w-full md:flex-1 flex flex-col gap-3">
+                                                    <img
+                                                        src={item.images[(index * 2 + 7) % item.images.length]}
+                                                        className="rounded-2xl h-52 sm:h-64 object-cover shadow-lg w-full max-w-xl md:ml-auto"
+                                                        alt=""
+                                                    />
+                                                    {index % 2 === 0 && (
+                                                        <img
+                                                            src={item.images[(index * 2 + 8) % item.images.length]}
+                                                            className="hidden sm:block rounded-2xl h-52 sm:h-64 object-cover shadow-lg w-full max-w-xl md:ml-auto"
+                                                            alt=""
+                                                        />
                                                     )}
                                                 </div>
 
-                                                <div className="w-full md:w-5/12 flex flex-col justify-center text-left">
-                                                    <p className="text-cyan-400 font-semibold tracking-widest text-xs md:text-sm uppercase mb-1">{stop.days}</p>
-                                                    <h3 className="text-white text-xl md:text-2xl font-bold font-playfair mb-3">{stop.location}</h3>
-                                                    <p className="text-neutral-400 text-sm md:text-base leading-relaxed max-w-md">{stop.description}</p>
+                                                {/* Content Block - Fixed padding offsets prevent overlaps on tablet widths */}
+                                                <div className={`w-full md:flex-1 flex flex-col justify-center text-left ${index % 2 === 0 ? 'md:pl-8 lg:pl-12' : 'md:pr-8 lg:pr-12'
+                                                    }`}>
+                                                    <p className="text-cyan-400 font-semibold tracking-widest text-xs uppercase mb-1">{stop.days}</p>
+                                                    <h3 className="text-white text-xl md:text-2xl font-bold font-playfair">{stop.location}</h3>
+                                                    <p className="text-neutral-400 text-sm md:text-base leading-relaxed mt-2 max-w-sm">
+                                                        {stop.description}
+                                                    </p>
                                                 </div>
+
                                             </div>
                                         )
                                     })}
@@ -146,13 +163,13 @@ export default function PackageDetails() {
                             </div>
                         </div>
 
-                        <section 
-                            style={{ backgroundImage: `url(${item.images[item.images.length - 1]})` }} 
+                        <section
+                            style={{ backgroundImage: `url(${item.images[item.images.length - 1]})` }}
                             className="relative bg-cover bg-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-30 py-16 md:py-24"
                         >
                             <div className="absolute inset-0 bg-black/75 z-0" />
                             <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-t from-transparent to-[#0f0f0f] z-0" />
-                            
+
                             <div className="relative z-10 flex items-center gap-4 mb-10 md:mb-16">
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-playfair text-white whitespace-normal tracking-wide">
                                     WHAT'S INCLUDED
