@@ -87,7 +87,7 @@ const seed = async () => {
             name: "Kashmir Valley Explorer",
             price: 256,
             destination: "India",
-            images: ['https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80',
+            images: ['https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80', 'https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D',
                 'https://images.unsplash.com/photo-1542003488933-7cfa7453807a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
                 'https://images.unsplash.com/photo-1707546519092-d801e35ebd46?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
                 'https://images.unsplash.com/photo-1706353222367-d0b0fb602f07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',

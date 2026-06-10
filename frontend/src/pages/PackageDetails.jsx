@@ -9,6 +9,18 @@ export default function PackageDetails() {
     const { id } = useParams()
     const [data, setData] = useState([])
     const navigate = useNavigate()
+    const [enquiryForm, setEnquiryForm] = useState({ name: '', phone: '', comment: '' })
+    const [enquirySent, setEnquirySent] = useState(false)
+
+    const handleEnquiry = async (e) => {
+        e.preventDefault()
+        try {
+            await api.post('/enquiry/create', { ...enquiryForm, packageId: id })
+            setEnquirySent(true)
+        } catch (err) {
+            console.error(err)
+        }
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -119,7 +131,7 @@ export default function PackageDetails() {
                                     <div className="absolute left-4 md:left-1/2 top-2 bottom-0 w-px bg-white/20 -translate-x-1/2 md:translate-x-0"></div>
 
                                     {item.itinerary.map((stop, index) => {
-                                        
+
                                         return (
                                             <div
                                                 key={index}
@@ -194,12 +206,20 @@ export default function PackageDetails() {
                                     <h2 className="text-white text-xl md:text-2xl font-semibold mb-6">but still have questions?</h2>
                                     <p className="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-4">Leave a request</p>
 
-                                    <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-4">
-                                        <input type="text" placeholder="Your name" className="w-full bg-transparent border-b border-white/20 text-white placeholder-white/30 py-2 text-sm outline-none focus:border-cyan-400 transition-colors" />
-                                        <input type="text" placeholder="Phone number" className="w-full bg-transparent border-b border-white/20 text-white placeholder-white/30 py-2 text-sm outline-none focus:border-cyan-400 transition-colors" />
-                                        <input type="text" placeholder="Comment" className="w-full bg-transparent border-b border-white/20 text-white placeholder-white/30 py-2 text-sm outline-none focus:border-cyan-400 transition-colors" />
-                                        <button className="w-full bg-white text-black font-bold py-3.5 rounded-xl hover:bg-neutral-200 transition-all mt-4 tracking-wide text-sm shadow-md">Send</button>
-                                    </form>
+                                    {enquirySent ? (
+                                        <div className="flex flex-col items-center justify-center h-48 gap-3">
+                                            <p className="text-4xl">✓</p>
+                                            <p className="text-white text-lg font-semibold">We'll be in touch soon!</p>
+                                            <p className="text-white/40 text-sm">Our team will contact you shortly.</p>
+                                        </div>
+                                    ) : (
+                                        <form onSubmit={handleEnquiry} className="flex flex-col gap-4">
+                                            <input value={enquiryForm.name} onChange={e => setEnquiryForm({ ...enquiryForm, name: e.target.value })} type="text" placeholder="Your name" className="w-full bg-transparent border-b border-white/20 text-white placeholder-white/30 py-2 text-sm outline-none focus:border-cyan-400 transition-colors" />
+                                            <input value={enquiryForm.phone} onChange={e => setEnquiryForm({ ...enquiryForm, phone: e.target.value })} type="text" placeholder="Phone number" className="w-full bg-transparent border-b border-white/20 text-white placeholder-white/30 py-2 text-sm outline-none focus:border-cyan-400 transition-colors" />
+                                            <input value={enquiryForm.comment} onChange={e => setEnquiryForm({ ...enquiryForm, comment: e.target.value })} type="text" placeholder="Comment" className="w-full bg-transparent border-b border-white/20 text-white placeholder-white/30 py-2 text-sm outline-none focus:border-cyan-400 transition-colors" />
+                                            <button type="submit" className="w-full bg-white text-black font-bold py-3.5 rounded-xl hover:bg-neutral-200 transition-all mt-4 tracking-wide text-sm shadow-md">Send</button>
+                                        </form>
+                                    )}
                                 </div>
 
                                 <div className="w-full max-w-md lg:max-w-none lg:flex-1 grid grid-cols-2 gap-3 md:gap-4 max-h-[450px] items-center">
