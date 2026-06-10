@@ -11,6 +11,7 @@ import PackageDetails from './pages/PackageDetails'
 import Contact from "./pages/Contact.jsx"
 import ProtectedRoute from "./components/ProtectedRoutes.jsx"
 import MyBookings from "./pages/MyBooking.jsx"
+import HowToBook from "./components/Howto.jsx"
 
 
 
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/booking/:id" element={<ProtectedRoute><Booking /></ProtectedRoute>}></Route>
           <Route path="/dashboard" element={<ProtectedRoute adminOnly={true}><Dashboard /></ProtectedRoute>}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/hiw" element={<HowToBook />}></Route>
           <Route path="/my-bookings" element={<ProtectedRoute><MyBookings /></ProtectedRoute>}></Route>
         </Routes>
 

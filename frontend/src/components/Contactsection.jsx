@@ -1,7 +1,5 @@
-import Footer from "../components/Footer";
-
 export default function ContactSection() {
-    return (<>
+    return (
 
         <section className="relative w-full bg-[#f8f9fa] min-h-[50vh] lg:h-[65vh] flex items-center py-12 lg:py-0 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 overflow-hidden select-none">
 
@@ -107,7 +105,5 @@ export default function ContactSection() {
                 </div>
             </div>
         </section>
-        <Footer></Footer> </>
-
     )
 }

@@ -3,7 +3,7 @@ import Hero from "../components/Hero"
 import Summary from "../components/Summary"
 import HowToBook from "../components/Howto"
 import Footer from "../components/Footer"
-import ContactSection from "./Contact"
+import ContactSection from "../components/Contactsection"
 // // Hero
 // https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80
 // // Packages

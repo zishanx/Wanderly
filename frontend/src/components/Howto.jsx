@@ -32,7 +32,7 @@ export default function HowToBook() {
     ]
 
     return (
-        <section className="bg-white py-16 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 font-sans overflow-hidden">
+        <section id="hiw" className="bg-white py-16 md:py-24 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 font-sans overflow-hidden">
 
             <div className="text-center mb-12 md:mb-16">
                 <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 mb-8">
