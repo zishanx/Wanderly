@@ -52,7 +52,17 @@ const seed = async () => {
             name: "Bali Rice Terrace Escape",
             price: 200,
             destination: "Indonesia",
-            images: ['https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=800&q=80',
+                'https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmFsaXxlbnwwfHwwfHx8MA%3D%3D',
+                'https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmFsaXxlbnwwfHwwfHx8MA%3D%3D',
+                'https://images.unsplash.com/photo-1573790387438-4da905039392?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEJhbGl8ZW58MHx8MHx8fDA%3D',
+                'https://images.unsplash.com/photo-1554481923-a6918bd997bc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEJhbGl8ZW58MHx8MHx8fDA%3D',
+                'https://images.unsplash.com/photo-1542897644-e04428948020?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fEJhbGl8ZW58MHx8MHx8fDA%3D',
+                'https://images.unsplash.com/photo-1531778272849-d1dd22444c06?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fEJhbGl8ZW58MHx8MHx8fDA%3D',
+                'https://plus.unsplash.com/premium_photo-1712029680514-dafc085deffd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fEJhbGl8ZW58MHx8MHx8fDA%3D',
+                'https://plus.unsplash.com/premium_photo-1721311166723-5c408da54364?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fEJhbGl8ZW58MHx8MHx8fDA%3D',
+                'https://plus.unsplash.com/premium_photo-1669317566483-d3327adeda10?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fEJhbGl8ZW58MHx8MHx8fDA%3D'
+            ],
             duration: "5 Days",
             maxTraveler: 3,
             departureDate: [
@@ -77,7 +87,15 @@ const seed = async () => {
             name: "Kashmir Valley Explorer",
             price: 256,
             destination: "India",
-            images: ['https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1598091383021-15ddea10925d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80',
+                'https://images.unsplash.com/photo-1542003488933-7cfa7453807a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
+                'https://images.unsplash.com/photo-1707546519092-d801e35ebd46?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
+                'https://images.unsplash.com/photo-1706353222367-d0b0fb602f07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
+                'https://plus.unsplash.com/premium_photo-1722867183518-8e8029f9b05f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
+                'https://images.unsplash.com/photo-1623612175509-30e97f5aa195?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                'https://images.unsplash.com/photo-1627894485229-ff2c619723e4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGthc2htaXIlMjB2YWxsZXl8ZW58MHx8MHx8fDA%3D',
+
+            ],
             duration: "7 Days",
             maxTraveler: 2,
             departureDate: [
@@ -103,7 +121,13 @@ const seed = async () => {
             name: "Maldives Overwater Retreat",
             price: 700,
             destination: "Maldives",
-            images: ['https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TWFsZGl2ZXN8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1576158831003-d41033ec31fd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fE1hbGRpdmVzfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80', 'https://images.unsplash.com/photo-1595184979141-090792f6b578?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fE1hbGRpdmVzfGVufDB8fDB8fHww',
+                'https://images.unsplash.com/photo-1574226780565-388f10f8121e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE1hbGRpdmVzfGVufDB8fDB8fHww',
+                'https://images.unsplash.com/photo-1467377791767-c929b5dc9a23?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fE1hbGRpdmVzfGVufDB8fDB8fHww',
+                'https://images.unsplash.com/photo-1666845992003-adaa79a59bf8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fE1hbGRpdmVzfGVufDB8fDB8fHww',
+                'https://images.unsplash.com/photo-1503125210483-8b1d12bccdbe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fE1hbGRpdmVzfGVufDB8fDB8fHww',
+
+            ],
             duration: "4 Days",
             maxTraveler: 4,
             departureDate: [
@@ -128,7 +152,9 @@ const seed = async () => {
             name: "Santorini Sunset Cruise",
             price: 850,
             destination: "Greece",
-            images: ['https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80'],
+            images: ['https://plus.unsplash.com/premium_photo-1661963145672-a2bd28eba0fb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FudG9yaW5pJTIwc3Vuc2V0fGVufDB8fDB8fHww', 'https://plus.unsplash.com/premium_photo-1724440325975-e2aa53906582?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fHNhbnRvcmluaSUyMHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80', 'https://images.unsplash.com/photo-1662116432150-4394d39ced32?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHNhbnRvcmluaSUyMHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1658686633002-fb463c74f34e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHNhbnRvcmluaSUyMHN1bnNldHxlbnwwfHwwfHx8MA%3D%3D',
+                'https://images.unsplash.com/photo-1580502304784-8985b7eb7260?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2FudG9yaW5pJTIwc3Vuc2V0fGVufDB8fDB8fHww'
+            ],
             duration: "5 Days",
             maxTraveler: 6,
             departureDate: [
@@ -153,7 +179,7 @@ const seed = async () => {
             name: "Patagonia Wilderness Trek",
             price: 1200,
             destination: "Argentina",
-            images: ['https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1558517286-8a9cb0b8c793?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF0YWdvbmlhfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1558517286-8a9cb0b8c793?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGF0YWdvbmlhfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80', 'https://images.unsplash.com/photo-1493724798364-c4ca5e3f5fd3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBhdGFnb25pYXxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1586600822178-26dec0f653a9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBhdGFnb25pYXxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhdGFnb25pYXxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1512398913032-4a69fd963ca9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHBhdGFnb25pYXxlbnwwfHwwfHx8MA%3D%3D'],
             duration: "10 Days",
             maxTraveler: 3,
             departureDate: [
@@ -179,7 +205,7 @@ const seed = async () => {
             name: "Kyoto Cherry Blossom Tour",
             price: 650,
             destination: "Japan",
-            images: ['https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80'],
+            images: ['https://plus.unsplash.com/premium_photo-1661963210464-73560a246e06?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8S3lvdG8lMjBjaGVycnklMjBibG9zc29tfGVufDB8fDB8fHww', 'https://plus.unsplash.com/premium_photo-1722593856461-0adf92daf500?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8S3lvdG8lMjBjaGVycnklMjBibG9zc29tfGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80', 'https://images.unsplash.com/photo-1669711675954-ff2581eaedc2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8S3lvdG8lMjBjaGVycnklMjBibG9zc29tfGVufDB8fDB8fHww', 'https://plus.unsplash.com/premium_photo-1673285286436-aaeab0b9aec8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEt5b3RvJTIwY2hlcnJ5JTIwYmxvc3NvbXxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1669711675797-7131f365f6da?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fEt5b3RvJTIwY2hlcnJ5JTIwYmxvc3NvbXxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1761141954476-2921e2e43e99?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY1fHxLeW90byUyMGNoZXJyeSUyMGJsb3Nzb218ZW58MHx8MHx8fDA%3D'],
             duration: "6 Days",
             maxTraveler: 5,
             departureDate: [
@@ -204,7 +230,7 @@ const seed = async () => {
             name: "Sahara Desert Adventure",
             price: 480,
             destination: "Morocco",
-            images: ['https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1511185307590-3c29c11275ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8U2FoYXJhJTIwZGVzZXJ0fGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80', 'https://images.unsplash.com/photo-1559586616-361e18714958?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U2FoYXJhJTIwZGVzZXJ0fGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1574545190393-e60e486e9d6a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fFNhaGFyYSUyMGRlc2VydHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1669745356056-2a2956af7e69?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fFNhaGFyYSUyMGRlc2VydHxlbnwwfHwwfHx8MA%3D%3D', 'https://plus.unsplash.com/premium_photo-1699534957001-dfd975896b2f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fFNhaGFyYSUyMGRlc2VydHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1535190772897-40d5447f6b70?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTJ8fFNhaGFyYSUyMGRlc2VydHxlbnwwfHwwfHx8MA%3D%3D', 'https://images.unsplash.com/photo-1613169620329-6785c004d900?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFNhaGFyYSUyMGRlc2VydHxlbnwwfHwwfHx8MA%3D%3D'],
             duration: "4 Days",
             maxTraveler: 8,
             departureDate: [
@@ -229,7 +255,7 @@ const seed = async () => {
             name: "Amalfi Coast Drive",
             price: 920,
             destination: "Italy",
-            images: ['https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1612698093158-e07ac200d44e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW1hbGZpJTIwY29hc3R8ZW58MHx8MHx8fDA%3D', 'https://plus.unsplash.com/premium_photo-1677359735525-41758ffe51c8?q=80&w=770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 'https://images.unsplash.com/photo-1689413055036-545ee2e9470c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGFtYWxmaSUyMGNvYXN0fGVufDB8fDB8fHww', 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=800&q=80', 'https://images.unsplash.com/photo-1533656338503-b22f63e96cd8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW1hbGZpJTIwY29hc3R8ZW58MHx8MHx8fDA%3D'],
             duration: "7 Days",
             maxTraveler: 4,
             departureDate: [
@@ -255,7 +281,7 @@ const seed = async () => {
             name: "Northern Lights Explorer",
             price: 1100,
             destination: "Iceland",
-            images: ['https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80'],
+            images: ['https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fE5vcnRoZXJuJTIwTGlnaHR8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1525220964737-6c299398493c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fE5vcnRoZXJuJTIwTGlnaHR8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1528155124528-06c125d81e89?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE5vcnRoZXJuJTIwTGlnaHR8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1475518845976-0fd87b7e4e5d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fE5vcnRoZXJuJTIwTGlnaHR8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1580671576132-bb0be268f939?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fE5vcnRoZXJuJTIwTGlnaHR8ZW58MHx8MHx8fDA%3D', 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80', 'https://plus.unsplash.com/premium_photo-1673254850380-ff70514979fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Tm9ydGhlcm4lMjBMaWdodHxlbnwwfHwwfHx8MA%3D%3D'],
             duration: "5 Days",
             maxTraveler: 6,
             departureDate: [
