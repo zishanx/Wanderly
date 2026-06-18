@@ -9,11 +9,11 @@ export default function Navbar() {
 
     return (
         <nav className="px-6 md:px-30 py-4 fixed top-0 w-full z-50">
-            <div className="flex justify-between items-center">
+            <div className="grid grid-cols-3 items-center">
                 <h2 className="font-bold text-2xl text-white">Wanderly</h2>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl items-center p-2 text-white">
+                <ul className="hidden md:flex justify-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl items-center p-2 text-white">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/packages">Packages</Link></li>
                     <li><Link to="/hiw">How it works</Link></li>
