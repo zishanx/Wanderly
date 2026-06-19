@@ -21,7 +21,7 @@ export default function Navbar() {
                 </ul>
 
                 {/* Desktop Buttons */}
-                <div className="hidden md:flex gap-2">
+                <div className="hidden md:flex justify-end gap-2">
                     {user?.isAdmin && (
                         <button
                             className="p-2 text-white bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl"
