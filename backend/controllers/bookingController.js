@@ -3,10 +3,6 @@ import Package from '../models/Package.js';
 import Booking from '../models/Booking.js'
 import crypto from 'crypto'
 
-console.log(process.env.RAZORPAY_KEY_ID, process.env.RAZORPAY_KEY_SECRET)
-
-
-
 
 export const createBooking = async (req, res) => {
 
@@ -14,8 +10,6 @@ export const createBooking = async (req, res) => {
 
     try {
 
-        console.log("REQ BODY:", req.body)
-        console.log("REQ USER:", req.user)
 
         const { packageId, selectedDate, travelers } = req.body;
         const getpackage = await Package.findById(packageId);
@@ -59,7 +53,6 @@ export const createBooking = async (req, res) => {
             message: error.message,
             detail: JSON.stringify(error, Object.getOwnPropertyNames(error), 2)
         })
-
     }
 }
 

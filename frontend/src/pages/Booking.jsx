@@ -35,9 +35,9 @@ export default function Booking() {
         setError("")
         try {
             const response = await api.post('/booking/create', {
+                packageId: booking._id,
                 selectedDate,
-                travelers,
-                packageId: booking._id
+                travelers
             })
             const order = response.data
             const option = {
@@ -57,6 +57,9 @@ export default function Booking() {
             const rzp = new window.Razorpay(option)
             rzp.open()
         } catch (err) {
+            console.log("FULL ERROR:", err.response)
+            console.log("STATUS:", err.response?.status)
+            console.log("DATA:", err.response?.data)
             setError(err.response?.data?.message || "Something went wrong")
         } finally {
             setLoading(false)
@@ -101,7 +104,7 @@ export default function Booking() {
                     <div className="flex justify-between sm:justify-start items-center w-full sm:w-auto">
                         <span className="text-gray-400 text-xs sm:hidden">Price:</span>
                         <div>
-                            <span className="text-cyan-600 font-semibold text-lg">₹{booking.price.toLocaleString()}</span>
+                            <span className="text-cyan-600 font-semibold text-lg">${booking.price.toLocaleString()}</span>
                             <span className="text-gray-400 text-sm"> / person</span>
                         </div>
                     </div>
@@ -159,8 +162,8 @@ export default function Booking() {
                 <div className="bg-white rounded-2xl border border-cyan-100 shadow-sm px-6 sm:px-8 py-5 sm:py-6 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
                     <div>
                         <p className="text-gray-400 text-xs uppercase tracking-widest mb-1">Total Amount</p>
-                        <p className="font-playfair text-2xl sm:text-3xl font-bold text-cyan-600">₹{totalPrice.toLocaleString()}</p>
-                        <p className="text-gray-400 text-xs mt-1">{travelers} traveler{travelers > 1 ? 's' : ''} × ₹{booking.price.toLocaleString()}</p>
+                        <p className="font-playfair text-2xl sm:text-3xl font-bold text-cyan-600">${totalPrice.toLocaleString()}</p>
+                        <p className="text-gray-400 text-xs mt-1">{travelers} traveler{travelers > 1 ? 's' : ''} × ${booking.price.toLocaleString()}</p>
                     </div>
                     <div className="text-left md:text-right w-full md:w-auto">
                         {error && <p className="text-red-400 text-sm mb-3">{error}</p>}
