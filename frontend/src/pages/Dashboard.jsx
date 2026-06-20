@@ -165,7 +165,7 @@ export default function AdminDashboard() {
                     <div className="bg-white/5 border border-white/10 rounded-2xl p-5 md:p-6">
                         <p className="text-white/40 text-xs uppercase tracking-widest mb-1">Total Revenue</p>
                         <p className="font-playfair text-2xl md:text-3xl font-bold text-cyan-400">
-                            ₹{bookings.filter(b => b.paymentStatus === 'paid').reduce((acc, b) => acc + b.totalPrice, 0).toLocaleString()}
+                            ${bookings.filter(b => b.paymentStatus === 'paid').reduce((acc, b) => acc + b.totalPrice, 0).toLocaleString()}
                         </p>
                     </div>
                 </div>
