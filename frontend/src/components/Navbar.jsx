@@ -49,7 +49,7 @@ export default function Navbar() {
 
                 {/* Hamburger */}
                 <button
-                    className="md:hidden text-white focus:outline-none"
+                    className="md:hidden text-white focus:outline-none justify-self-end"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
                     {menuOpen ? (
