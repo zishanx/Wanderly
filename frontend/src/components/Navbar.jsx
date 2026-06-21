@@ -8,12 +8,12 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <nav className="px-6 md:px-30 py-4 fixed top-0 w-full z-50">
+        <nav className="px-6 md:px-30 py-4 fixed top-0 w-full z-50 h-20">
             <div className="grid grid-cols-2 md:grid-cols-3 items-center">
                 <h2 className="font-bold text-2xl text-white">Wanderly</h2>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex justify-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl items-center p-2 text-white">
+                <ul className="hidden md:flex justify-self-center lg:gap-6 justify-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl items-center px-4 py-2 text-sm w-fit text-white whitespace-nowrap">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/packages">Packages</Link></li>
                     <li><Link to="/hiw">How it works</Link></li>

@@ -37,7 +37,7 @@ export default function ContactSection() {
                         Hello!
                     </h1>
                     <p className="text-base sm:text-lg text-neutral-600 font-normal leading-normal max-w-sm">
-                        Talk to us to use Geobotanics for your business.
+                        Talk to us to choose the perfect adventure according to your taste!!
                     </p>
                 </div>
 
@@ -48,7 +48,7 @@ export default function ContactSection() {
                         </span>
                         <a
                             href="tel:5544458631"
-                            className="text-xl sm:text-2xl font-medium text-[#16a34a] hover:opacity-80 transition-opacity"
+                            className="text-xl sm:text-2xl font-medium hover:opacity-80 transition-opacity"
                         >
                             554 4458 631
                         </a>
@@ -60,9 +60,9 @@ export default function ContactSection() {
                         </span>
                         <a
                             href="mailto:info@mantle-labs.com"
-                            className="text-xl sm:text-2xl font-medium text-[#16a34a] underline decoration-2 underline-offset-4 hover:opacity-80 transition-opacity break-all"
+                            className="text-xl sm:text-2xl font-medium  decoration-2 underline-offset-4 hover:opacity-80 transition-opacity break-all"
                         >
-                            info@mantle-labs.com
+                            info@wanderly-adventures.com
                         </a>
                     </div>
 
