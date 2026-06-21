@@ -9,7 +9,7 @@ export default function Navbar() {
 
     return (
         <nav className="px-6 md:px-30 py-4 fixed top-0 w-full z-50">
-            <div className="grid grid-cols-3 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 items-center">
                 <h2 className="font-bold text-2xl text-white">Wanderly</h2>
 
                 {/* Desktop Menu */}
