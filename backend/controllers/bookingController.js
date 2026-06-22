@@ -57,7 +57,7 @@ export const createBooking = async (req, res) => {
     } catch (error) {
         res.status(400).json({
             message: error.message,
-            detail: error.error || error.description || JSON.stringify(error, null, 2)
+            detail: JSON.stringify(error, Object.getOwnPropertyNames(error), 2)
         })
 
     }
