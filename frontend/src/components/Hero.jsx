@@ -2,7 +2,7 @@ export default function Hero() {
     return (
         <section
             style={{ backgroundImage: `url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')` }}
-            className="min-h-screen bg-cover bg-center relative flex items-center justify-center pt-24 py-12 lg:py-0"
+            className="min-h-screen bg-cover bg-center relative flex items-center justify-center pt-30 py-12 lg:py-0"
         >
             <div className="absolute inset-0 bg-black/50 w-full h-full z-0" />
 
