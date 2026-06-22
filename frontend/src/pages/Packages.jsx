@@ -50,7 +50,7 @@ export default function Package() {
             <div className="bg-stone-800 w-full">
                 <Navbar />
             </div>
-            
+
             <section
                 style={{ backgroundImage: `url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80')` }}
                 className="h-[85vh] md:h-screen bg-cover bg-center relative"
@@ -81,28 +81,28 @@ export default function Package() {
                     From volcanic sunrises to overwater retreats, handpicked expeditions for every kind of traveler.
                 </p>
             </div>
-            
+
             <div className="w-1/4 md:w-1/12 mx-auto border-t border-neutral-300 mb-10"></div>
 
             <div className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 pb-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
                 {data.map(item => {
                     let image = item.images[0]
                     return (
-                        <div key={item._id} className="package-card relative group overflow-hidden rounded-2xl shadow-lg border border-neutral-100 bg-neutral-900 aspect-[4/5] sm:aspect-video md:aspect-auto md:h-[420px]">
+                        <div onClick={() => navigate(`/packages/${item._id}`)} key={item._id} className="package-card relative group overflow-hidden rounded-2xl shadow-lg border border-neutral-100 bg-neutral-900 aspect-[4/5] sm:aspect-video md:aspect-auto md:h-[420px]">
                             <img src={image} className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" alt="" />
-                            
+
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
-                            
+
                             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 transition-transform duration-500 transform translate-y-2 group-hover:-translate-y-4 flex flex-col gap-2 z-10">
                                 <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold">{item.destination}</span>
                                 <h3 className="text-white font-bold text-2xl md:text-3xl font-playfair tracking-tight">{item.name}</h3>
-                                
+
                                 <div className="h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden flex flex-col gap-3 pt-2 border-t border-white/10 mt-2">
                                     <div className="flex items-center justify-between text-sm text-gray-300">
                                         <p className="font-medium">{item.duration}</p>
                                         <p className="text-white font-bold text-lg">${item.price}</p>
                                     </div>
-                                    <button 
+                                    <button
                                         onClick={() => navigate(`/packages/${item._id}`)}
                                         className="w-full bg-white text-black py-3 rounded-xl font-bold text-sm cursor-pointer hover:bg-neutral-100 transition-colors shadow-md mt-1"
                                     >
