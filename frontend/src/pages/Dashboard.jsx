@@ -148,7 +148,7 @@ export default function AdminDashboard() {
     return (
         <div className="min-h-screen bg-[#0a0a0a] font-dm">
             <Navbar />
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-16">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 py-24 md:py-16">
 
                 <h1 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-2">Admin Dashboard</h1>
                 <p className="text-white/40 text-sm mb-8 md:mb-10">Manage bookings and packages</p>

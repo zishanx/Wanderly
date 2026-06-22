@@ -14,7 +14,7 @@ router.get('/all', protect, admin, getAllBookings)
 
 // packageRoutes
 
-router.post('/admin/post',protect,admin,)
+
 
 router.delete('/delete/:id', protect, admin, deletePackage)
 
