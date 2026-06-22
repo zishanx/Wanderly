@@ -5,9 +5,9 @@ import { getMyBooking } from "../controllers/gmbcontroller.js";
 
 const router = express.Router()
 
-router.post('/create', protect, createBooking)
+router.post('/booking/create', protect, createBooking)
 
-router.post('/verify', protect, verifyPayment)
+router.post('/booking/verify', protect, verifyPayment)
 
 router.get('/all', protect, getMyBooking)
 

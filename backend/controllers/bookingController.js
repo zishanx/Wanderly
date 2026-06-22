@@ -9,13 +9,23 @@ console.log(process.env.RAZORPAY_KEY_ID, process.env.RAZORPAY_KEY_SECRET)
 
 
 export const createBooking = async (req, res) => {
+
+
+
     try {
+
+        console.log("REQ BODY:", req.body)
+        console.log("REQ USER:", req.user)
 
         const { packageId, selectedDate, travelers } = req.body;
         const getpackage = await Package.findById(packageId);
         const totalPrice = getpackage.price * travelers;
 
-        const getdate = getpackage.departureDate.find(task => new Date(task.date).toISOString() === new Date(selectedDate).toISOString());
+        const getdate = getpackage.departureDate.find(task => new Date(task.date).toDateString() === new Date(selectedDate).toDateString());
+
+        if (!getdate) {
+            return res.status(400).json({ message: "Selected date not found in package" });
+        }
 
         if (getdate.slots > 0) {
             const razorpay = new Razorpay({
@@ -45,7 +55,12 @@ export const createBooking = async (req, res) => {
 
 
     } catch (error) {
-        res.status(400).json({ message: error.message })
+        res.status(400).json({
+            message: error.message,
+            detail: error.toString(),
+            stack: error.stack
+        })
+
     }
 }
 
